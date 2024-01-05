@@ -1,0 +1,20 @@
+
+
+:root{
+  --bg-gradient: linear-gradient(45deg,#41295a,#2F0743);
+  --color: #fff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+}
+
+body{
+  color: var(--color);
+  background: var(--bg-gradient);
+  height: 100vh;
+}

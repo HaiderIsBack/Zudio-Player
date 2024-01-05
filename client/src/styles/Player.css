@@ -1,0 +1,95 @@
+.music-player-container{
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.music-player-image{
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.music-player-image.playing{
+    animation: rotate infinite linear 10s;
+}
+
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.music-controller-container{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 20px;
+    border-radius: 15px;
+}
+
+.music-controller-container input[type=range]{
+    width: 400px;
+    margin: 20px 10px;
+}
+
+.music-controller-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-controller-btns .playPauseMusic{
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.music-controller-btns .previousMusic,
+.music-controller-btns .nextMusic{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.music-controller-btns .playPauseMusic:hover,
+.music-controller-btns .previousMusic:hover,
+.music-controller-btns .nextMusic:hover{
+    scale: 1.1;
+}
+
+.musicDuration{
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0;
+}
+
+/*Mobile Sizes*/
+@media (max-width: 500px) {
+    .music-player-container{
+        width: 260px;
+        height: 260px;
+    }
+    .music-player-image{
+        width: 240px;
+        height: 240px;
+    }
+    .music-controller-container input[type=range]{
+        width: 250px;
+    }
+}
